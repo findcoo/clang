@@ -63,7 +63,7 @@ RUN git submodule update --init --recursive && \
 	./install.py --clang-completer --system-libclang
 	
 WORKDIR $HOME
-RUN mkdir src && chown -R User:User $HOME &&
+RUN mkdir src && chown -R User:User $HOME && \
 	cp $HOME/User/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py $HOME/src/
 
 VOLUME $HOME/src
